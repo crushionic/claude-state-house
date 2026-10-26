@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>title pending</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/",
+          "@sparkjsdev/spark": "https://sparkjs.dev/releases/spark/2.4.0/spark.module.js"
+        }
+      }
+    </script>
+    <script type="module" src="js/main.js"></script>
+  </head>
+  <body class="no-scroll">
+    <!-- 3D scene, fixed behind everything -->
+    <canvas id="stage" aria-hidden="true"></canvas>
+
+    <!-- White fade used only when post-processing is off (?nofx) -->
+    <div id="whiteout" aria-hidden="true"></div>
+
+    <!-- Start screen -->
+    <div id="intro">
+      <button id="enter" type="button">Enter</button>
+      <p id="intro-status" role="status"></p>
+    </div>
+
+    <!-- Gives scroll-driven scenes their scroll length -->
+    <div id="scroll-spacer" aria-hidden="true"></div>
+  </body>
+</html>
